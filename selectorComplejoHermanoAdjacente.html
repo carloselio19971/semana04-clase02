@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Hermano Adjacente</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">¿Que son los Selectores?</a></li>
+            <li>
+                <a href="#selectores-simples">Selectores Simples</a>
+                <ol>
+                    <li><a href="selectorSimpleEtiqueta.html">Selector de Etiqueta</a></li>
+                    <li><a href="selectorSimpleClase.html">Selector de Clase </a></li>
+                    <li><a href="selectoridSimpleId.html">Selector de Id </a></li>
+                    <li><a href="selectorSimpleUniversal.html">Selector Universal </a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#selectores-complejos">Selectores Compuestos</a>
+                <ol>
+                    <li><a href="selectorComplejoDescedencia.html">Selector de Descendencia </a></li>
+                    <li><a href="selectorComplejoHijoDirecto.html">Selector hijo Directo </a></li>
+                    <li><a href="selectorComplejoHermanoAdjacente.html">Selector de Hermano Siguiente o Adjacente </a></li>
+                    <li><a href="selectorComplejoHermanosSiguientesAdjacentes.html">Selecciona Hermanos siguientes Adjacentes </a></li>
+                    <li><a href="selectorComplejoAnidamiento.html">Selector de anidamiento  </a></li>
+                </ol>
+            </li>
+        </ul>
+    </nav>
+    <h1 class="titulos-selectores">Selector Hermano Adjacente</h1>
+
+    <p>El selector hermano adjacente <span class="resaltar-concepto">nos permite selecionar el elemento que este al mismo nivel del hermano</span> y siguiente <strong>solo aplica a un solo elemento.</strong> 
+
+    
+    <h2>Ejemplo</h2>
+
+    <p>Para este caso se creo una caja , en la cual se  tiene como primer elemento un emcabezado, luego 4 parrafos, en este caso se le esta aplicando estilo al hermano del componente h2 que esta dentro un div caja-3</p>
+    
+    <div class="caja-3">
+                <h2>Hola Soy un encabezado</h2>
+                <p>Soy parrafo 1 </p>
+                <p> Soy el parrafo 2 hermano del parrafo  1</p>  
+                <p>Soy parrafo 3 hermano del parrafo 1 </p>
+                <p>Soy el parrafo 4 hermano del parrafo 1</p>
+    </div>
+
+    
+</body>
+</html>

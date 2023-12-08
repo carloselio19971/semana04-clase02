@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+/* selector universal */
+*{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+
+
+}
+
+.resaltar-concepto{
+    background-color: yellow;
+    color:red;
+}
+
+.titulos-selectores{
+    color:green;
+}
+
+.menu-navegacion  li a {
+    color: #0055ff;
+    text-decoration: none;
+
+}
+
+.menu-navegacion ol{
+    color: #0055ff;
+}
+/* selector de anidamiento */
+.caja, .caja-2 , .caja-3 , .caja-4{
+    width: 200px;
+    height: 300px;
+    background-color:yellow;
+    border:5px solid black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* selector de etiqueta */
+h4{
+    background-color: red;
+    font-size: 1rem;
+
+}
+/* selector de id */
+#parrafo-especial{
+    background-color: blue;
+    color:beige;
+}
+
+/* Selector de Descendencia */
+.caja p {
+    color: red;
+}
+/* Selector hijo directo */
+.caja-2 > p {
+    color: red;
+}
+
+/* Selector Hermano adjacente */
+.caja-3  h2 +p{
+   background-color: blue;
+   color:white;
+}
+
+/* Selector hermanos siguientes adjacentes */
+
+.caja-4 h2 ~ p {
+    background-color: blue;
+    color:white;
+}

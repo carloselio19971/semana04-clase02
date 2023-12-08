@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Descendencia</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">¿Que son los Selectores?</a></li>
+            <li>
+                <a href="#selectores-simples">Selectores Simples</a>
+                <ol>
+                    <li><a href="selectorSimpleEtiqueta.html">Selector de Etiqueta</a></li>
+                    <li><a href="selectorSimpleClase.html">Selector de Clase </a></li>
+                    <li><a href="selectoridSimpleId.html">Selector de Id </a></li>
+                    <li><a href="selectorSimpleUniversal.html">Selector Universal </a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#selectores-complejos">Selectores Compuestos</a>
+                <ol>
+                    <li><a href="selectorComplejoDescedencia.html">Selector de Descendencia </a></li>
+                    <li><a href="selectorComplejoHijoDirecto.html">Selector hijo Directo </a></li>
+                    <li><a href="selectorComplejoHermanoAdjacente.html">Selector de Hermano Siguiente o Adjacente </a></li>
+                    <li><a href="selectorComplejoHermanosSiguientesAdjacentes.html">Selecciona Hermanos siguientes Adjacentes </a></li>
+                    <li><a href="selectorComplejoAnidamiento.html">Selector de anidamiento  </a></li>
+                </ol>
+            </li>
+        </ul>
+    </nav>
+    <h1 class="titulos-selectores">Selector de Descendencia</h1>
+
+    <p>El selector de descendias nos permite <span class="resaltar-concepto">seleccionar a todos los descendientes de un elemento padre </span><strong>no necesariamente un hijo directo</strong>.
+        
+    <h2>Ejemplo</h2>
+
+    <p>En esta caso estamos seleccionando a todos los parrafos hijos de la clase caja y todos sus descendientes</p>
+
+    <p>Para este ejemlo se creo una clase caja, dentro de esta clase se creo un primer parrafo, luego se creo una elemento div el cual contiene 3 elementos , 2 elementos h3 y un elemento parrafo, luego un elemento h3 y un ultimo elmento parrafo.</p>
+
+    <p>En este caso el estilo se va aplicar a todos los elementos parrafo , asi no sean desciente directo por lo que tambien se pinta el parrafo nieto</p>
+    
+    <div class="caja">
+            <p>Soy parrafo hijo</p>
+            <h3>Soy un h3</h3>
+            <h3>Soy otro h3</h3>
+            <p>Soy el parrafo nieto</p>
+            <p>Soy otro parrafo nieto</p>
+            <h3>Soy otro h3</h3>
+            <p>Soy parrafo hijo</p> 
+    </div>
+
+
+</body>
+</html>
