@@ -15,24 +15,13 @@ alt +~ (colita de chancho)
 
 ## BOX MODEL
 
-una caja es un elemento es una caja
-layout como se estable el agoritmo la manera como lo posiciona
-
-1. Todos los elementos en la web son rectangualres
-2 width=ancho height=alto
-3 display block  (solo se aplica a elementos de bloques)
-
-todos los elemenso tiene este tipo de elementos
-
-Colores de una caja 
-Interno
-azul => content box
-verde padding box =>
-melon => border-box
-
-Externo
-narajna => margin box
-
-padding afecta el contenido interno es la parte interna de la caja
-
-border rompe el fluyo basico del dom peude moverse donde querems
+1.  El Box Model hace referencia a como se representa el contenido una pagina web, mediante >el uso de cajas rectangulares
+1.1 Box-Content (Hacer referencia a la parte interior del box  model, en donde va el contenido)
+1.2 Box-Padding (Hace referencia al espacio entre el context-box y el border-box , en otras palabras el espacio entre el contenido y el border de nueva box model)
+1.3 Border-Box (Hace referencia a la linea que rodea el contendido de mi box model)
+1.4 Marging-Box (Es el espacio que se encuentra afuera del borde de la caja,>representa la distancia con otras cajas o elementos)
+1.5 Margin-Negativo Con el margin negativo podemos hacer que elemento se fue mueva hacia fuera de la pantalla de navegador por lo un parte se ocultara
+1.6 Colpasado-Margen-Vertical Cuando existe colapsado de margenes verticales, el mayor valor del margen aboserbe al menor.
+1.7 Centrado Perfecto Margin: el margin 0 auto nos permite centrar de manera perfecta un elemento de bloque
+1.8 El selector universal permite dar estilos a todos los elementos html, su uso particar es para dar la propiedad box-sizing: border-box , para que cuando usemos margin, padding no se vea afectado el tamaño del contenedor.
+1.9 El shorthand nos permite dar propiedades de padding en sentido de las manecillas del reloj , (top, left, bottom , right)

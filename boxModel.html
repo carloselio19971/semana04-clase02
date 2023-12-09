@@ -4,8 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Model</title>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <h1>Soyun Box Model</h1>
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">¿Que son los Selectores?</a></li>
+            <li>
+                <a href="#selectores-simples">Selectores Simples</a>
+                <ol>
+                    <li><a href="selectorSimpleEtiqueta.html">Selector de Etiqueta</a></li>
+                    <li><a href="selectorSimpleClase.html">Selector de Clase </a></li>
+                    <li><a href="selectoridSimpleId.html">Selector de Id </a></li>
+                    <li><a href="selectorSimpleUniversal.html">Selector Universal </a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#selectores-complejos">Selectores Compuestos</a>
+                <ol>
+                    <li><a href="selectorComplejoDescedencia.html">Selector de Descendencia </a></li>
+                    <li><a href="selectorComplejoHijoDirecto.html">Selector hijo Directo </a></li>
+                    <li><a href="selectorComplejoHermanoAdjacente.html">Selector de Hermano Siguiente o Adjacente </a></li>
+                    <li><a href="selectorComplejoHermanosSiguientesAdjacentes.html">Selecciona Hermanos siguientes Adjacentes </a></li>
+                    <li><a href="selectorComplejoAnidamiento.html">Selector de anidamiento  </a></li>
+                </ol>
+            </li>
+    
+            <li>
+                <a href="boxModel.html#concepto-box-model">Box Model</a>
+                <ol>  
+                    <li><a href="boxModel.html#capas-box-model">Capas del Box Model</a>
+                    <ol>
+                        <li><a href="boxModel.html#content-box">Content-Box</a></li>
+                        <li><a href="boxModel.html#padding-box">Padding-Bog</a>
+                            <ul>
+                                <li><a href="boxModel.html#shorthand-padding">Shorthand para Padding</a></li>
+                            </ul>
+                            </li>
+                        <li><a href="boxModel.html#border-box">Border-box</a></li>
+                        <li><a href="boxModel.html#margin-box">Magin-box</a>
+                            <ol>
+                                <li><a href="boxModel.html#shorthand-margin">Shorthand para Margin</a> </li>
+                                <li><a href="boxModel.html#margin-negativo">Margin negativo</a> </li>
+                                <li><a href="boxModel.html#colapsado-margenes-verticales">Colapsado de Margenenes Verticales</a> </li>
+                                <li><a href="boxModel.html#centrado-perfecto-horizontal">Centrado Perfecto Horizontal con Margen</a> </li>
+                            </ol>
+                        </li>
+                       
+                    </ol>
+                    </li>
+                  <li><a href="boxModel.html#selector-universal-uso-especifico"> Especifico del Selector Universal</a></li>
+                  <p></p>
+                </ol>
+            </li>
+    
+    
+        </ul>
+    </nav>
+    <h1 id="concepto-box-model" class="titulos-selectores">¿Que es el Box Model?</h1>
+
+    <p>El Box Model hace referencia a como se representa el contenido una pagina web, mediante <span class="resaltar-concepto">el uso de cajas rectangulares</span></p>
+
+    <p>El agoritmo define como se <span class="resaltar-concepto" >muestran los elementos y imagenes , estilo a travez del layout</span></p>
+
+    <h2 class="titulos-selectores">Box Model</h2>
+    <p>Cad elementos se muestra como una caja rectangular, existen 2 tipos de elementos</p>
+    <ol>
+        <li>Elementos Inline</li>
+        <li>Elementos de Bloque</li>
+    </ol>
+
+    <p>En caso de tener un elemento inline se tiene que <span class="resaltar-concepto" >definir el width y height (ancho y alto)</span></p>
+    <p>En caso elemento de bloque el  <span class="resaltar-concepto" >el ancho es realtivo al contenido</span></p>
+
+    <h2 id="capas-box-model" class="titulos-selectores">Capas del Box Model</h2>
+    <h3 id="content-box" class="titulos-selectores">Content-Box</h3>
+    <p>Hacer referencia a la parte interior del box  model, en donde va el contenido</p>
+
+    <div class="caja-box-content"> Soy un contenxt box el contenido interno </div>
+
+    <h3 id="padding-box" class="titulos-selectores">Padding-Box</h3>
+    <p>Hace referencia al <span class="resaltar-concepto">espacio entre el context-box y el border-box , </span>en otras palabras el espacio entre el contenido y el border de nueva box model</p>
+
+    <p>Nos permite mover el contenido interno</p>
+
+    <div class="caja-box-padding">
+        <p style="color:white">
+            Tengo la siguientes propiedades de padding 
+            padding-top: 20px
+            padding-right:2px
+            padding-bottom:10px
+            padding-left: 5px
+            <br>
+           <strong> (padding 20px 2px 10px 5px)</strong>
+        </p>
+    </div>
+    
+    <h3  id="shorthand-padding" class="titulos-selectores" >Shorthand para Padding</h3>
+    <p>Para ejemplo de padding box se aplico el concepto <span class="resaltar-concepto">de shorthand</span> el cual significa que si yo quiero el siguiente estilo:
+
+        <ul>
+            <li> padding-top: 20px</li>
+            <li> padding-right:2px</li>
+            <li> padding-bottom:10px</li>
+            <li> padding-left: 5px</li>
+        </ul>
+    Podria simplemente colocar solo <span class="resaltar-concepto">padding 20px 2px 10px 5px</span> , y colocar los valores en sentido de las manecilals del reloj., primero top , luego right, botton y al final
+        </p>    
+
+
+    <h3 id="border-box" class="titulos-selectores">Border-Box</h3>
+    <p>Hace referencia a la linea que rodea el contendido de mi box model</p>
+    <p><span class="resaltar-concepto">Esta propiedad rompe el flujo basico del D.O.M, y es externo a elmento</span></p>
+    <div class="caja-border-box">
+        <p>Esta caja tiene un border de 5px con borde tipo dotted</p>
+    </div>
+    
+    <h3 id="margin-box" class="titulos-selectores">Margin-Box</h3>
+    <p>Es el espacio que se <span class="resaltar-concepto">encuentra afuera del borde de la caja, </span>representa la distancia con otras cajas o elementos </p>
+    <h3>Ejemplo</h3>
+
+    <div class="caja-border-box">
+        Yo soy un caja y me dieron un margen top y botom de 30 y un margen right y left de 40 </div>
+    <div class="caja-border-box">
+        Soy una caja copia con los mismos estilos y el mismo margen
+    </div>
+
+
+    <h3 id="shorthand-margin" class="titulos-selectores" >Shorthand para Margin</h3>
+    <p>Para ejemplo de margin-box se aplico el concepto <span class="resaltar-concepto">de shorthand</span> el cual significa que si yo quiero el siguiente estilo:
+
+        <ul>
+            <li> margin-top: 30px</li>
+            <li> margin-right:40px</li>
+            <li> margin-bottom:30px</li>
+            <li> margin-left: 40px</li>
+        </ul>
+    Podria simplement colocar solo <span class="resaltar-concepto">margin 30px 40px</span>  y colocar los 30px para top y botton y 40px para left y right
+        </p>    
+
+       
+    <h3 id="margin-negativo" class="titulos-selectores">Margin Negativo</h3>
+    <p>Con el margin negativo podemos hacer que elemento se fue mueva hacia fuera de la pantalla de navegador por lo un parte se ocultara</p>
+
+    <h3  class="titulos-selectores">Ejemplo</h3>
+    <div class="caja-margin-negativo">
+    <p>Esta caja tiene un margen negativo left  de -2rem</p>
+    </div>
+
+    <p><span class="resaltar-concepto">Esta caja tiene un margen negativo left  de -2rem</span></p>
+    
+    <h3 class="titulos-selectores" id="colapsado-margenes-verticales"> Colapsado Margenes Verticales</h3>
+    
+    <div class="caja-colapsado  vertical-1">
+        <p>Soy la caja 1 vertical y tengo un  margin-bottom: 2rem</p>
+    </div>
+    <div class="caja-colapsado  vertical-2">
+        <p>Soy la caja 2 vertical   margin-top: 4rem;</p>
+    </div>
+
+    <p>Cuando existe colapsado de margenes verticales, el mayor valor del margen aboserbe al menor, en este ejemplo la caja vertical 1 tiene un margin botton 2rem y la caja 2 tiene un margin-top de  4rem, por lo <span class="color:white;">que css va decide que aplicar el margin de mayor valor osea 4rem</span></p>
+    
+    <h3  class="titulos-selectores" id="centrado-perfecto-horizontal"> Centrado Perfecto Horizontal con Margen</h3>
+
+    <div class="caja-colapsado-centrado vertical-1">
+        <p>Soy la caja 1 centrado perfecto con  margin 0 auto </p>
+    </div>
+    <div class="caja-colapsado-centrado  vertical-2">
+        <p>Soy la caja 2 con centrado perfecto margin 0 auto</p>
+    </div>
+
+    <p>Nos permite centrar un elemento de bloque de manejra perfecta usando la <span class="resaltar-concepto">propiedad margin 0 auto</span></p>
+
+
+<h3 class="titulos-selectores" id="selector-universal-uso-especifico">Uso Especifico del Selector Universal</h3>
+
+<p>El selector universal permite dar estilos a todos los elementos html, su uso particar es para dar la propiedad <span  class="resaltar-concepto" >box-sizing: border-box , para que cuando usemos margin, padding no se vea afectado el tamaño del contenedor </span></p>
+   
+   
+
+
+    
+
+
 </body>
 </html>
